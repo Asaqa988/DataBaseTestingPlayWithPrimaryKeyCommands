@@ -1,0 +1,23 @@
+Select * from customers
+
+
+
+alter table customers drop PRIMARY KEY 
+
+SELECT table_name , CONSTRAINT_NAME FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE 
+
+WHERE REFERENCED_TABLE_NAME = 'customers' AND REFERENCED_COLUMN_NAME= 'customerNumber'
+
+select * from orders
+
+select * from payments
+
+alter table orders drop foreign key  orders_ibfk_1
+alter table payments drop foreign key  payments_ibfk_1
+
+truncate table customers
+Select * from customers
+
+desc customers
+
+select count(customerNumber) from customers
